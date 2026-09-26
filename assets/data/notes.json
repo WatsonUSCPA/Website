@@ -1,9 +1,23 @@
 {
   "source": "https://note.com/wtcajptc",
-  "updatedAt": "2026-09-19T22:33:05.679Z",
+  "updatedAt": "2026-09-26T23:13:30.530Z",
   "count": 360,
-  "totalCount": 375,
+  "totalCount": 377,
   "articles": [
+    {
+      "title": "【判例解説】全部ゼロのForm 1065は「有効な申告書」なのか",
+      "url": "https://note.com/wtcajptc/n/n48cdf27132a2",
+      "publishAt": "2026-09-26T01:18:06+09:00",
+      "eyecatch": "https://assets.st-note.com/production/uploads/images/313583085/rectangle_large_type_2_3e77e3c088b30c9e94e77d6c25531cb0.png?fit=bounds&quality=85&width=1280",
+      "hashtags": []
+    },
+    {
+      "title": "1031 ExchangeのBootを理解する：現金を受け取らなくても課税される仕組み",
+      "url": "https://note.com/wtcajptc/n/nf2e56afd43b0",
+      "publishAt": "2026-09-22T00:55:19+09:00",
+      "eyecatch": "https://assets.st-note.com/production/uploads/images/313893392/rectangle_large_type_2_d42d0c970dbb0a0d360d7495134d1063.png?fit=bounds&quality=85&width=1280",
+      "hashtags": []
+    },
     {
       "title": "MFS（夫婦個別申告）の落とし穴：片方がItemizedを選ぶと、もう片方の標準控除は「ゼロ」になる",
       "url": "https://note.com/wtcajptc/n/n406b346c85ee",
@@ -2648,24 +2662,6 @@
         "#イーロン・マスク",
         "#法的"
       ]
-    },
-    {
-      "title": "#2【Tax Return】高所得者必見！2024年版Mega Backdoor Roth戦略と具体例",
-      "url": "https://note.com/wtcajptc/n/n1fa340c059f6",
-      "publishAt": "2024-11-15T01:01:55+09:00",
-      "eyecatch": "https://assets.st-note.com/production/uploads/images/161763530/rectangle_large_type_2_232a13043de6087def617594ab3c8c62.png?fit=bounds&quality=85&width=1280",
-      "hashtags": [
-        "#アメリカ",
-        "#節税",
-        "#IRA"
-      ]
-    },
-    {
-      "title": "番外編【Tax Return】J1ビザ保持者向け確定申告ガイド",
-      "url": "https://note.com/wtcajptc/n/ndb9b3976db10",
-      "publishAt": "2024-11-14T16:06:20+09:00",
-      "eyecatch": "https://assets.st-note.com/production/uploads/images/161814327/rectangle_large_type_2_f45787a06f470f20840f5841e635939e.png?fit=bounds&quality=85&width=1280",
-      "hashtags": []
     }
   ]
 }
