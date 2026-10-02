@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../../assets/css/style.css" />
+<link rel="stylesheet" href="../../assets/css/site.css?v=20261001" />
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261001" />
 <style>
   body{ font-family:"Inter", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
   main.legal{ max-width:760px; margin:0 auto; padding:2rem 1.5rem 4rem; }
@@ -34,22 +35,30 @@
 </style>
 </head>
 <body>
+<a class="ws-skip" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="../">
-      <img class="brand-mark" src="../../assets/img/avatar.png" alt="" width="40" height="40" />
-      <span class="brand-text"><strong>Watson US CPA</strong></span>
+<header class="ws-header">
+  <div class="ws-wrap ws-header-inner">
+    <a class="ws-logo" href="../" aria-label="Watson US CPA home">
+      <span class="ws-logo-mark" aria-hidden="true">W</span>
+      <span class="ws-logo-text"><strong>Watson US CPA</strong><small>Practical U.S.–Japan tax</small></span>
     </a>
-    <nav class="site-nav">
-      <a href="../#contact">Contact</a>
-      <a href="../">Fee Estimator</a>
-      <a href="../../policies/">日本語</a>
+    <nav class="ws-nav" aria-label="Main">
+      <a href="../#services">Services</a>
+      <a href="../#ways">Ways to work</a>
+      <a href="../#tools">Tools</a>
+      <a href="../#notes">Articles</a>
+      <a href="../#about">About</a>
+      <a href="../intake/">Get a quote</a>
     </nav>
+    <div class="ws-actions">
+      <a class="ws-cta" href="../#contact">Contact</a>
+      <a class="ws-lang" href="../../policies/" hreflang="ja" lang="ja" aria-label="日本語版">日本語</a>
+    </div>
   </div>
 </header>
 
-<main class="legal">
+<main id="main" class="legal">
   <h1>Policies</h1>
   <p class="updated">Last updated: August 16, 2026 ・ <a href="../../policies/">日本語版はこちら</a></p>
 
@@ -68,7 +77,7 @@
     <h2>1. Customer Support &amp; Contact</h2>
     <p>For questions about our services, quotes, engagements in progress, or to request a refund or cancellation, please reach us through any of the following:</p>
     <ul>
-      <li><strong>Contact form (preferred):</strong> use the <a href="../#contact">contact form on the Fee Estimator page</a>.</li>
+      <li><strong>Contact form (preferred):</strong> use the <a href="../#contact">contact form</a>.</li>
       <li><strong>Direct message on X (Twitter):</strong> <a href="https://x.com/watsonuscpa" target="_blank" rel="noopener">@watsonuscpa</a></li>
       <li><strong>Existing clients:</strong> simply reply to the email thread used for your engagement.</li>
     </ul>
@@ -115,7 +124,7 @@
 
     <h3>3-3. Booking, rescheduling, or cancelling a consultation (hourly)</h3>
     <ul>
-      <li>To book a consultation, first send us your consultation topic from the <a href="../?type=consult">Fee Estimator page</a>; we then guide you to our booking calendar to request a time. Your booking is a <strong>request and is confirmed once we approve it</strong>. You may withdraw a request at any time before approval, at no charge.</li>
+      <li>To book a consultation, first send us your consultation topic from the <a href="../intake/?type=consult">Fee Estimator page</a>; we then guide you to our booking calendar to request a time. Your booking is a <strong>request and is confirmed once we approve it</strong>. You may withdraw a request at any time before approval, at no charge.</li>
       <li>After confirmation, we <strong>send an invoice by email</strong> for the consultation fee.</li>
       <li>Once confirmed, you may still reschedule or cancel free of charge until the <strong>business day before</strong> your appointment.</li>
       <li>Same-day cancellations and no-shows may be charged up to <strong>one hour of the consultation fee</strong> for the reserved time.</li>
@@ -157,19 +166,24 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p class="footer-brand">Watson US CPA</p>
-    <nav class="footer-nav">
-      <a href="../">Fee Estimator</a>
+<footer class="ws-footer">
+  <div class="ws-wrap ws-footer-inner">
+    <div class="ws-footer-brand">
+      <strong>Watson US CPA</strong>
+      <span>Practical U.S.–Japan tax · Japanese / English</span>
+    </div>
+    <nav class="ws-footer-nav" aria-label="Footer">
+      <a href="../">Home</a>
+      <a href="../#tools">Self-check tools</a>
+      <a href="../intake/">Get a quote</a>
       <a href="../#contact">Contact</a>
-      <a href="../../policies/">日本語版ポリシー</a>
-      <a href="../../index.html">日本語トップ</a>
+      <a href="../policies/">Policies</a>
+      <a href="../../policies/" hreflang="ja" lang="ja">日本語</a>
+      <a href="https://note.com/wtcajptc" target="_blank" rel="noopener">note</a>
+      <a href="https://x.com/Watsonuscpajp" target="_blank" rel="noopener">X (English)</a>
     </nav>
-    <p class="footer-disclaimer">
-      Content on this site is provided for general information purposes and does not constitute tax or legal advice for your specific situation.
-    </p>
-    <p class="footer-copy">© <span id="year"></span> Watson US CPA</p>
+    <p class="ws-footer-note">This site provides general information only and is not individual tax or legal advice. Please consult a qualified professional before making decisions.</p>
+    <p class="ws-footer-note">© <span id="year">2026</span> Watson US CPA</p>
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
