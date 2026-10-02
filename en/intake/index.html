@@ -41,6 +41,10 @@
   h1{ font-size:26px; font-weight:700; margin:0 0 .5rem; color:var(--navy); line-height:1.35; }
   .lead{ color:var(--tx-secondary); font-size:14px; margin:0 0 1.25rem; }
   .notice{ background:var(--bg-info); color:var(--tx-info); border-radius:var(--r-md); padding:12px 16px; font-size:13px; margin-bottom:1.5rem; }
+  .notice[hidden]{ display:none; }
+  .consult-intro{ font-size:14px; line-height:1.7; }
+  .consult-intro ol{ margin:.35rem 0 0; padding-left:1.4rem; }
+  .consult-intro li{ margin:.15rem 0; }
 
   .q{ background:var(--bg-primary); border:1px solid var(--line); border-radius:var(--r-lg); box-shadow:var(--shadow); padding:20px 24px; margin-bottom:1rem; }
   .q h2{ font-size:15.5px; font-weight:700; color:var(--navy); margin:0 0 .25rem; }
@@ -135,9 +139,21 @@
 </header>
 
 <main id="main">
-  <h1>Fee Estimator — US Tax Preparation &amp; Consulting</h1>
-  <p class="lead">Answer a few questions and an estimated fee appears at the bottom of the screen. Takes 1–2 minutes. Your answers are processed entirely in your browser and are not sent anywhere unless you submit the request form.</p>
-  <div class="notice">The amount shown is a <b>minimum ("starting from") fee</b>. A firm quote is confirmed by email after we review your situation, and <b>no work begins — and no fee is charged — until you agree to the final quote</b>.</div>
+  <h1 id="page-title">Fee Estimator — US Tax Preparation &amp; Consulting</h1>
+  <p class="lead" id="page-lead">A fee estimator for individuals. Answer a few questions and an estimated fee appears at the bottom of the screen. Takes 1–2 minutes. Your answers are processed entirely in your browser and are not sent anywhere unless you submit the request form.</p>
+  <div class="notice consult-intro" id="consult-intro" hidden>
+    <b>How a consultation works</b>
+    <ol>
+      <li>Choose a topic below and describe your question.</li>
+      <li>Send it via "See breakdown / request a quote" at the bottom of the screen.</li>
+      <li>On the booking page (Cal.com, 60 min online) that appears after sending, request a time. The booking is confirmed once we approve it, and we email you an invoice for the fee ($350/hour, 1-hour minimum).</li>
+    </ol>
+  </div>
+  <div class="notice" id="fee-notice">The amount shown is a <b>minimum ("starting from") fee</b>. A firm quote is confirmed by email after we review your situation, and <b>no work begins — and no fee is charged — until you agree to the final quote</b>.</div>
+  <div class="notice" style="background:var(--bg-tertiary);color:var(--tx-secondary);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <span>This page is for <b>individuals</b>. For company (corporation / LLC) bookkeeping and financial statements, please contact us. (A corporate estimator is available <a href="../../intake/corp/" hreflang="ja" lang="ja" style="color:inherit">in Japanese</a>.)</span>
+    <a href="../#contact" style="flex:none;text-decoration:none;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:999px;padding:8px 18px">Corporate clients →</a>
+  </div>
 
   <!-- Q1 type -->
   <div class="q" id="q-type">
@@ -153,11 +169,12 @@
   <!-- Consultation only -->
   <div class="q mode-consult" id="q-consult" style="display:none">
     <h2>What is the consultation about?</h2>
-    <p class="hint">All consultations are $350/hour (1-hour minimum). Answer the questions below, then send your topic via "See breakdown / request a quote" — we'll guide you to scheduling right after you submit.</p>
+    <p class="hint">"Tax strategy" is a consultation about <b>decisions ahead of you</b>, not return preparation (e.g. when to exercise RSUs or stock options, how to hold NISA accounts and mutual funds, organizing assets before or after a move, timing a real estate sale, incorporating a self-employed business). All consultations are $350/hour (1-hour minimum). Answer the questions below, then send your topic via "See breakdown / request a quote" — we'll guide you to scheduling right after you submit.</p>
     <div class="opts" data-key="consult">
       <button class="opt on" data-v="move">Taxes around moving to/from the US or Japan</button>
       <button class="opt" data-v="invest">US taxation of Japanese investments &amp; assets (NISA, mutual funds, insurance, etc.)</button>
       <button class="opt" data-v="resident">Residency determination / US-Japan tax treaty</button>
+      <button class="opt" data-v="strategy">Tax strategy / tax planning</button>
       <button class="opt" data-v="other">Something else</button>
     </div>
   </div>
@@ -540,9 +557,25 @@ function fatcaThreshold(){
 }
 
 // ===== Mode switching =====
+// In consultation mode, switch the heading and intro at the top of the page
+const PAGE_COPY = {
+  base:    { title: document.title, h1: document.getElementById('page-title').textContent, lead: document.getElementById('page-lead').textContent },
+  consult: { title: 'Book a Consultation | Watson US CPA', h1: 'Book a Consultation — US–Japan Tax',
+             lead: 'A one-time consultation or second opinion, with no return preparation involved ($350/hour, 1-hour minimum). Send us your topic, then book a 60-minute online session right after.' },
+};
+function syncPageCopy(mode){
+  const c = PAGE_COPY[mode === 'consult' ? 'consult' : 'base'];
+  document.title = c.title;
+  document.getElementById('page-title').textContent = c.h1;
+  document.getElementById('page-lead').textContent = c.lead;
+  document.getElementById('consult-intro').hidden = (mode !== 'consult');
+  document.getElementById('fee-notice').hidden = (mode === 'consult');
+}
+
 function onChange(){
   const isLate = state.type === 'sdop' && state.sdoptype === 'late';
   const mode = isLate ? 'annual' : state.type;   // "late" uses the same questions as an annual return
+  syncPageCopy(mode);
   document.querySelectorAll('.q').forEach(q => {
     if (q.id === 'q-type') return;
     const show = q.classList.contains('mode-' + mode);
@@ -638,7 +671,8 @@ function calc(){
 
   if (state.type === 'consult') {
     const labels = { move:'Consultation: moving to/from the US or Japan', invest:'Consultation: US taxation of Japanese investments & assets',
-                     resident:'Consultation: residency / tax treaty', other:'Tax consultation' };
+                     resident:'Consultation: residency / tax treaty', strategy:'Consultation: tax strategy / tax planning',
+                     other:'Tax consultation' };
     add(labels[state.consult] + ' (hourly)', FEES.consultHr);
     return { rows, total, consult:true };
   }
@@ -804,6 +838,13 @@ function copyEstimate(){
     state.type = t;
     document.querySelectorAll('[data-key="type"] .opt').forEach(b => b.classList.toggle('on', b.dataset.v === t));
   }
+})();
+
+// Carry ?type= over to the language switch (stay in consultation mode)
+(function(){
+  const t = new URLSearchParams(location.search).get('type');
+  const a = document.querySelector('.ws-lang');
+  if (a && (t === 'consult' || t === 'sdop')) a.href = a.getAttribute('href') + '?type=' + t;
 })();
 
 onChange();

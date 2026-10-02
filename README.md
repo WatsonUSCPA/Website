@@ -23,6 +23,8 @@
 ├── en/intake/              英語の料金見積り（旧 /en/）。Cal.com 予約導線・ポリシー要約を含む
 ├── en/policies/            英語ポリシー
 ├── intake/ , intake/corp/  料金見積り（個人 / 法人）
+│                           ※ intake/?type=consult と en/intake/?type=consult は「相談」を初期選択し、
+│                             見出し・説明を相談用（流れ → 送信後に Cal.com 予約）に切り替える。サイト内の相談導線はここへリンク
 ├── contact/ , policies/    お問い合わせ / 各種ポリシー
 ├── ira/ fbar/ arrival/ exit-tax/   判定ツール
 ├── assets/
