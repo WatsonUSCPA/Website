@@ -317,7 +317,8 @@
           gotoNotesSearch(t.notesQuery);
         });
       }
-      wrap.appendChild(card);
+      // HTML 側に置いた静的カード（data-static）の手前に差し込む
+      wrap.insertBefore(card, wrap.querySelector("[data-static]"));
     });
   })();
 
@@ -329,13 +330,14 @@
     if (!input || !listEl || !window.WNOTES) return;
 
     function render(query) {
-      var items = window.WNOTES.search(query, 24);
+      // 未入力時は新着のみ表示（トップを長くしすぎない）。検索時は最大24件
+      var items = window.WNOTES.search(query, query ? 24 : 6);
       listEl.innerHTML = "";
       items.forEach(function (a) { listEl.appendChild(noteArticleLink(a)); });
       if (metaEl) {
         var total = window.WNOTES.state.totalCount;
         if (!query) {
-          metaEl.textContent = total ? "公開中の記事 " + total + " 件（新着順）" : "";
+          metaEl.textContent = total ? "新着 " + items.length + " 件を表示中（公開中の記事 " + total + " 件からキーワードで検索できます）" : "";
         } else {
           metaEl.textContent = items.length ? items.length + " 件ヒット" : "該当する記事が見つかりませんでした。別のキーワードでお試しください。";
         }
