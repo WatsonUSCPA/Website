@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../assets/css/site.css?v=20261001" />
-<link rel="stylesheet" href="../assets/css/style.css?v=20261001" />
+<link rel="stylesheet" href="../assets/css/style.css?v=20261002" />
 <style>
   main.contact{ max-width:680px; margin:0 auto; padding:2rem 1.5rem 4rem; }
   main.contact h1{ font-size:26px; color:var(--navy); margin:0 0 .5rem; }
@@ -80,6 +80,7 @@
       <label for="c-topic">お問い合わせの種類 <span class="opt-tag">（必須）</span></label>
       <select id="c-topic" name="topic" required>
         <option value="">選択してください</option>
+        <option value="顧問契約・通年の税務顧問">顧問契約（通年の税務顧問）のご相談</option>
         <option value="見積り・新規のご依頼">お見積り・新規のご依頼について</option>
         <option value="依頼中の案件">ご依頼中の案件について</option>
         <option value="返金・キャンセル">返金・キャンセルのお申し出</option>
@@ -148,6 +149,13 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ?topic=retainer（トップページの「通年の税務顧問について相談する」）で種類を初期選択
+(function(){
+  if (new URLSearchParams(location.search).get('topic') === 'retainer') {
+    document.getElementById('c-topic').value = '顧問契約・通年の税務顧問';
+  }
+})();
 
 // Netlify Forms へ AJAX 送信
 document.getElementById('contactform').addEventListener('submit', function(e){

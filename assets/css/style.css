@@ -87,6 +87,19 @@ p a:not(.btn):not(.contact-cta), li a:not(.btn):not(.contact-cta), dd a, .privac
   width: 4px; height: 4px; border-radius: 50%; background: var(--accent);
 }
 
+.hero-also { margin: 0; font-size: 0.85rem; color: var(--muted); }
+.hero-also a { color: var(--accent); white-space: nowrap; }
+.hero-card li.hero-card-also { color: var(--muted-2); font-size: 0.82rem; }
+.hero-card li.hero-card-also::before { background: var(--border); }
+
+/* "Also available" row under the main services */
+.also-row { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border-soft); }
+.also-title { margin: 0 0 0.75rem; font-size: 0.8rem; color: var(--muted); font-weight: 600; letter-spacing: 0.03em; }
+.also-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem 1.5rem; }
+.also-list li { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.86rem; color: var(--muted); line-height: 1.6; }
+.also-list strong { color: var(--text); font-weight: 600; font-size: 0.88rem; }
+.also-list a { font-size: 0.82rem; font-weight: 500; color: var(--accent); }
+
 /* ---------- Sections ---------- */
 .section { padding: 4rem 0; }
 .section-alt { background: var(--bg-alt); border-block: 1px solid var(--border-soft); }
@@ -133,6 +146,7 @@ p a:not(.btn):not(.contact-cta), li a:not(.btn):not(.contact-cta), dd a, .privac
 .ways-groups { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; column-gap: 2rem; }
 .ways-group { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 1rem; border-top: 2px solid var(--accent); padding-top: 1.1rem; }
 .ways-group-label { padding: 0 0.1rem 0.25rem; }
+.ways-group-secondary { border-top-color: var(--border); }
 .ways-group-name { margin: 0; font-family: "Noto Serif JP", Georgia, serif; font-size: 1.05rem; font-weight: 600; color: var(--text); line-height: 1.5; }
 .ways-group-sub { margin: 0.15rem 0 0; font-size: 0.8rem; color: var(--muted); }
 .way { display: flex; flex-direction: column; padding: 1.6rem 1.5rem 1.4rem; }
@@ -359,6 +373,7 @@ p a:not(.btn):not(.contact-cta), li a:not(.btn):not(.contact-cta), dd a, .privac
 @media (max-width: 860px) {
   .hero-grid, .cards-2, .cards-3, .tools-grid, .facts, .fc-inputs, .ways-groups, .contact-grid { grid-template-columns: 1fr; }
   .ways-groups { row-gap: 2.25rem; }
+  .also-list { grid-template-columns: 1fr; }
   .tool-demo { padding: 1.2rem 1.1rem 1rem; }
   .tool-demo-head { flex-direction: column; gap: 0.3rem; }
   .diagnosis-card { padding: 1.2rem 1.1rem; }
@@ -373,5 +388,6 @@ p a:not(.btn):not(.contact-cta), li a:not(.btn):not(.contact-cta), dd a, .privac
   .hero-actions, .contact-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn, .contact-actions .btn, .fc-result-actions .btn { width: 100%; }
   .about-intro { flex-direction: column; }
+  .br-wide { display: none; }
   .note-links a { flex-direction: column; gap: 0.2rem; }
 }
