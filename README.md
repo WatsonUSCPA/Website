@@ -16,12 +16,24 @@
 
 ```
 .
-├── index.html              トップページ（ヒーロー / 診断 / ケース / 運営者 / フッター）
+├── index.html              トップページ（日本語）：ヒーロー / 取り扱い業務 / 資産・事業をお持ちの方へ /
+│                           ご依頼の形 / 判定ツール（FBAR・8938 簡易チェック＋ツール一覧） / テーマから調べる /
+│                           note記事 / 運営者 / ご依頼の流れ
+├── en/index.html           トップページ（英語）。お問い合わせフォーム（Netlify Forms: contact-en）を含む
+├── en/intake/              英語の料金見積り（旧 /en/）。Cal.com 予約導線・ポリシー要約を含む
+├── en/policies/            英語ポリシー
+├── intake/ , intake/corp/  料金見積り（個人 / 法人）
+├── contact/ , policies/    お問い合わせ / 各種ポリシー
+├── ira/ fbar/ arrival/ exit-tax/   判定ツール
 ├── assets/
-│   ├── css/style.css       デザイン
+│   ├── css/site.css        全ページ共通：デザイントークン、ヘッダー / ナビ / フッター（ws-* クラス）
+│   ├── css/style.css       トップ（日英）・お問い合わせ・ポリシーのページ用スタイル
+│   ├── data/notes.json     note記事データ（GitHub Actions が毎週自動更新）
 │   └── js/
-│       ├── content.js      ★ 質問・アドバイス・noteリンクの定義（ここを編集）
-│       └── app.js          診断の描画エンジン（通常触らない）
+│       ├── content.js      ★ 質問・アドバイス・noteリンク・判定ツール一覧の定義（ここを編集）
+│       ├── app.js          テーマから調べる / ツール一覧 / note検索の描画エンジン（通常触らない）
+│       ├── notes.js        notes.json の読み込み・検索
+│       └── fbar-check.js   トップの FBAR・Form 8938 簡易チェック（日英共通）
 ├── .nojekyll               GitHub Pages 用
 └── README.md
 ```
