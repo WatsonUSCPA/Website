@@ -99,24 +99,34 @@
 
   footer{ max-width:720px; margin:0 auto; padding:0 1.25rem 8rem; color:var(--tx-tertiary); font-size:12px; }
 </style>
+<link rel="stylesheet" href="../assets/css/site.css?v=20261001" />
 </head>
 <body>
+<a class="ws-skip" href="#main">本文へスキップ</a>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="../index.html">
-      <img class="brand-mark" src="../assets/img/favicon.png" alt="" />
-      <span class="brand-text"><strong>Watson US CPA</strong></span>
+<header class="ws-header">
+  <div class="ws-wrap ws-header-inner">
+    <a class="ws-logo" href="../" aria-label="Watson US CPA トップ">
+      <span class="ws-logo-mark" aria-hidden="true">W</span>
+      <span class="ws-logo-text"><strong>Watson US CPA</strong><small>日米にまたがる税務の実務解説</small></span>
     </a>
-    <nav class="site-nav" style="display:flex;gap:18px">
-      <a href="../contact/">お問い合わせ</a>
-      <a href="../en/">English</a>
-      <a href="../index.html">トップへ戻る</a>
+    <nav class="ws-nav" aria-label="メインメニュー">
+      <a href="../#services">取り扱い業務</a>
+      <a href="../#ways">ご依頼の形</a>
+      <a href="../#tools">判定ツール</a>
+      <a href="../#diagnosis">テーマから調べる</a>
+      <a href="../#notes">記事</a>
+      <a href="../#about">運営者</a>
+      <a href="../intake/" aria-current="page">お見積もり</a>
     </nav>
+    <div class="ws-actions">
+      <a class="ws-cta" href="../contact/">お問い合わせ</a>
+      <a class="ws-lang" href="../en/intake/" hreflang="en" lang="en" aria-label="English version">EN</a>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="main">
   <h1>料金かんたん見積り</h1>
   <p class="lead">個人の方向けの料金シミュレーターです。質問に答えていくと、画面下に概算料金が表示されます。所要1〜2分。入力内容はブラウザ内でのみ処理され、送信されません。</p>
   <div class="notice">表示されるのは<b>最低料金（ここから始まる金額）</b>です。正式なお見積りは、メールで詳しい状況を伺ったうえで確定し、<b>ご同意いただいてから着手します</b>。</div>
@@ -402,7 +412,7 @@
 </div>
 
 <footer>
-  <p>本シミュレーターの金額は情報提供目的の概算であり、正式な見積り・契約は Engagement Letter によります。返金・キャンセルの条件は<a href="../policies/">各種ポリシー</a>をご覧ください。お問い合わせは<a href="../contact/">お問い合わせフォーム</a>、または<a href="https://x.com/watsonuscpa" target="_blank" rel="noopener">X（@watsonuscpa）のDM</a>へ。<a href="../en/">English version is available here</a>.</p>
+  <p>本シミュレーターの金額は情報提供目的の概算であり、正式な見積り・契約は Engagement Letter によります。返金・キャンセルの条件は<a href="../policies/">各種ポリシー</a>をご覧ください。お問い合わせは<a href="../contact/">お問い合わせフォーム</a>、または<a href="https://x.com/watsonuscpa" target="_blank" rel="noopener">X（@watsonuscpa）のDM</a>へ。<a href="../en/intake/" hreflang="en" lang="en">English version is available here</a>.</p>
 </footer>
 
 <script>
