@@ -1,0 +1,199 @@
+/* =============================================================
+ * Watson US CPA — shared site chrome (all pages)
+ * Design tokens, header, navigation, footer, skip link, focus.
+ * New chrome classes use the "ws-" prefix so they never collide
+ * with the page-specific inline styles of the tool / intake pages.
+ * On pages with inline <style>, link this file AFTER the inline
+ * styles so the token overrides below take effect.
+ * ============================================================= */
+:root {
+  /* New design tokens */
+  --bg: #ffffff;
+  --bg-alt: #f7f8fa;
+  --bg-soft: #f0f2f5;
+  --border: #e2e5eb;
+  --border-soft: #eceef2;
+  --text: #1a2332;
+  --muted: #5a6577;
+  --muted-2: #646e7e;
+  --accent: #2f5f8a;
+  --accent-hover: #244a6e;
+  --accent-soft: #e8f0f7;
+  --accent-line: #b8cce0;
+  --yes: #2d6a4f;
+  --radius: 8px;
+  --max: 1000px;
+
+  /* Legacy tokens used by existing pages, remapped to the new palette */
+  --navy: #1a2332;
+  --navy-700: #2a3646;
+  --slate: #5a6577;
+  --teal: #2f5f8a;
+  --teal-600: #244a6e;
+  --gold: #b8cce0;
+  --surface: #ffffff;
+  --ink: #1a2332;
+  --ink-soft: #5a6577;
+  --line: #e2e5eb;
+  --shadow: 0 1px 2px rgba(26, 35, 50, 0.05);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f8fa;
+  --bg-tertiary: #eef1f5;
+  --bg-info: #e8f0f7;
+  --tx-info: #244a6e;
+  --tx-primary: #1a2332;
+  --tx-secondary: #5a6577;
+  --tx-tertiary: #646e7e;
+  --r-lg: 10px;
+}
+
+/* ---------- Skip link & focus ---------- */
+.ws-skip {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.ws-skip:focus { top: 0.6rem; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+.ws-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.96);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  font-family: inherit;
+}
+.ws-wrap {
+  width: min(var(--max), calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+.ws-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.8rem 0;
+}
+.ws-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--text);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.ws-logo:hover { text-decoration: none; }
+.ws-logo-mark {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+.ws-logo-text { display: flex; flex-direction: column; line-height: 1.25; }
+.ws-logo-text strong { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+.ws-logo-text small { font-size: 0.68rem; color: var(--muted); font-weight: 400; }
+
+.ws-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-left: auto;
+  font-size: 0.82rem;
+}
+.ws-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0.25rem 0;
+}
+.ws-nav a:hover { color: var(--text); text-decoration: none; }
+.ws-nav a[aria-current="page"] { color: var(--accent); font-weight: 500; }
+
+.ws-actions { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+.ws-cta {
+  padding: 0.38rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ws-cta:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.ws-lang {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ws-lang:hover { background: var(--bg-alt); color: var(--text); text-decoration: none; }
+
+/* ---------- Footer ---------- */
+.ws-footer {
+  border-top: 1px solid var(--border);
+  padding: 2.25rem 0 2.5rem;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.ws-footer-inner { display: flex; flex-direction: column; gap: 0.9rem; }
+.ws-footer-brand strong { display: block; color: var(--text); font-size: 0.9rem; }
+.ws-footer-brand span { color: var(--muted-2); font-size: 0.78rem; }
+.ws-footer-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; }
+.ws-footer-nav a { color: var(--muted); text-decoration: none; }
+.ws-footer-nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.ws-footer-note { margin: 0; font-size: 0.75rem; color: var(--muted-2); max-width: 46rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .ws-header-inner { flex-wrap: wrap; row-gap: 0.55rem; padding-bottom: 0.4rem; }
+  .ws-actions { margin-left: auto; }
+  .ws-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1rem;
+    padding: 0.1rem 0 0.25rem;
+  }
+  .ws-nav::-webkit-scrollbar { display: none; }
+}
+@media (max-width: 480px) {
+  .ws-wrap { width: calc(100% - 1.5rem); }
+  .ws-logo-text small { display: none; }
+}
+@media print {
+  .ws-header { position: static; }
+}

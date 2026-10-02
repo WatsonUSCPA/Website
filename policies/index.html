@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/site.css?v=20261001" />
+<link rel="stylesheet" href="../assets/css/style.css?v=20261001" />
 <style>
   main.legal{ max-width:760px; margin:0 auto; padding:2rem 1.5rem 4rem; }
   main.legal h1{ font-size:26px; color:var(--navy); margin:0 0 .5rem; }
@@ -33,23 +34,31 @@
 </style>
 </head>
 <body>
+<a class="ws-skip" href="#main">本文へスキップ</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="../index.html">
-      <img class="brand-mark" src="../assets/img/avatar.png" alt="" width="40" height="40" />
-      <span class="brand-text"><strong>Watson US CPA</strong></span>
+<header class="ws-header">
+  <div class="ws-wrap ws-header-inner">
+    <a class="ws-logo" href="../" aria-label="Watson US CPA トップ">
+      <span class="ws-logo-mark" aria-hidden="true">W</span>
+      <span class="ws-logo-text"><strong>Watson US CPA</strong><small>日米にまたがる税務の実務解説</small></span>
     </a>
-    <nav class="site-nav">
-      <a href="../contact/">お問い合わせ</a>
-      <a href="../intake/">料金見積り</a>
-      <a href="../en/policies/">English</a>
-      <a href="../index.html">トップへ戻る</a>
+    <nav class="ws-nav" aria-label="メインメニュー">
+      <a href="../#services">取り扱い業務</a>
+      <a href="../#ways">ご依頼の形</a>
+      <a href="../#tools">判定ツール</a>
+      <a href="../#diagnosis">テーマから調べる</a>
+      <a href="../#notes">記事</a>
+      <a href="../#about">運営者</a>
+      <a href="../intake/">お見積もり</a>
     </nav>
+    <div class="ws-actions">
+      <a class="ws-cta" href="../contact/">お問い合わせ</a>
+      <a class="ws-lang" href="../en/policies/" hreflang="en" lang="en" aria-label="English version">EN</a>
+    </div>
   </div>
 </header>
 
-<main class="legal">
+<main id="main" class="legal">
   <h1>各種ポリシー</h1>
   <p class="updated">最終更新日：2026年8月16日 ・ <a href="../en/policies/">English version is available here</a></p>
 
@@ -157,20 +166,28 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p class="footer-brand">Watson US CPA</p>
-    <nav class="footer-nav">
-      <a href="../index.html">トップ</a>
+<footer class="ws-footer">
+  <div class="ws-wrap ws-footer-inner">
+    <div class="ws-footer-brand">
+      <strong>Watson US CPA</strong>
+      <span>日米にまたがる税務の実務解説 · 日本語 / English</span>
+    </div>
+    <nav class="ws-footer-nav" aria-label="フッターメニュー">
+      <a href="../">トップ</a>
+      <a href="../#tools">判定ツール</a>
+      <a href="../#diagnosis">テーマから調べる</a>
+      <a href="../ira/">IRA判定</a>
+      <a href="../fbar/">FBAR / FATCA チェック</a>
+      <a href="../intake/">お見積もり（個人）</a>
+      <a href="../intake/corp/">お見積もり（法人）</a>
       <a href="../contact/">お問い合わせ</a>
-      <a href="../intake/">料金見積り</a>
-      <a href="../en/">English</a>
-      <a href="../en/policies/">Policies (EN)</a>
+      <a href="../policies/">各種ポリシー</a>
+      <a href="../en/policies/" hreflang="en" lang="en">English</a>
+      <a href="https://note.com/wtcajptc" target="_blank" rel="noopener">note</a>
+      <a href="https://x.com/watsonuscpa" target="_blank" rel="noopener">X</a>
     </nav>
-    <p class="footer-disclaimer">
-      本サイトの内容は一般的な情報提供を目的としたものであり、個別の税務・法務上のアドバイスを構成するものではありません。
-    </p>
-    <p class="footer-copy">© <span id="year"></span> Watson US CPA</p>
+    <p class="ws-footer-note">本サイトの内容は一般的な情報提供を目的としたものであり、個別の税務・法務上のアドバイスを構成するものではありません。実際のご判断にあたっては、必ず資格を有する専門家にご相談ください。</p>
+    <p class="ws-footer-note">© <span id="year">2026</span> Watson US CPA</p>
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
