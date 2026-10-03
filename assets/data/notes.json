@@ -1,9 +1,23 @@
 {
   "source": "https://note.com/wtcajptc",
-  "updatedAt": "2026-09-26T23:13:30.530Z",
+  "updatedAt": "2026-10-03T23:25:04.756Z",
   "count": 360,
-  "totalCount": 377,
+  "totalCount": 379,
   "articles": [
+    {
+      "title": "【判例解説】「借りたお金」「預かったお金」なら課税されない？",
+      "url": "https://note.com/wtcajptc/n/n954dab3acc6e",
+      "publishAt": "2026-10-03T00:34:24+09:00",
+      "eyecatch": "https://assets.st-note.com/production/uploads/images/313577830/rectangle_large_type_2_063004acf312724b273f511e40ad041d.png?fit=bounds&quality=85&width=1280",
+      "hashtags": []
+    },
+    {
+      "title": "Form 8621問題：「会社がPFICか」と「会社の中にPFICがないか」という話",
+      "url": "https://note.com/wtcajptc/n/nd1a2c29c9b96",
+      "publishAt": "2026-09-29T01:24:52+09:00",
+      "eyecatch": "https://assets.st-note.com/production/uploads/images/303891520/rectangle_large_type_2_1426c02927c81950729e758e8cee29cb.jpeg?fit=bounds&quality=85&width=1280",
+      "hashtags": []
+    },
     {
       "title": "【判例解説】全部ゼロのForm 1065は「有効な申告書」なのか",
       "url": "https://note.com/wtcajptc/n/n48cdf27132a2",
@@ -2637,30 +2651,6 @@
         "#株式",
         "#キャピタルゲイン",
         "#寄付金控除"
-      ]
-    },
-    {
-      "title": "#3 【Tax Return】高所得者向け！2024年版Backdoor Roth戦略と具体例",
-      "url": "https://note.com/wtcajptc/n/naebf7282944d",
-      "publishAt": "2024-11-16T00:55:56+09:00",
-      "eyecatch": "https://assets.st-note.com/production/uploads/images/161763730/rectangle_large_type_2_eb1dcdcb6eaa6ec626a35825d5bedaeb.png?fit=bounds&quality=85&width=1280",
-      "hashtags": [
-        "#アメリカ",
-        "#会計事務所",
-        "#IRA"
-      ]
-    },
-    {
-      "title": "イーロン・マスクがスイングステートで1,700万ドルを配布した背景と税務的な視点",
-      "url": "https://note.com/wtcajptc/n/n7e2dff0f91ba",
-      "publishAt": "2024-11-15T07:10:37+09:00",
-      "eyecatch": "https://assets.st-note.com/production/uploads/images/161885155/rectangle_large_type_2_101a79c269854132571daaceb3be52dd.png?fit=bounds&quality=85&width=1280",
-      "hashtags": [
-        "#アメリカ",
-        "#税金",
-        "#キャンペーン",
-        "#イーロン・マスク",
-        "#法的"
       ]
     }
   ]
