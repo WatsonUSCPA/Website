@@ -1,9 +1,23 @@
 {
   "source": "https://note.com/wtcajptc",
-  "updatedAt": "2026-10-24T22:46:24.663Z",
+  "updatedAt": "2026-10-31T23:50:01.596Z",
   "count": 360,
-  "totalCount": 384,
+  "totalCount": 386,
   "articles": [
+    {
+      "title": "【判例解説】Tax Home（税務上の本拠地）とは何か ― 単身赴任のJAL機長が逆転勝訴したJones判決",
+      "url": "https://note.com/wtcajptc/n/n73c69b0f5162",
+      "publishAt": "2026-10-31T04:38:39+09:00",
+      "eyecatch": "https://assets.st-note.com/production/uploads/images/325675326/rectangle_large_type_2_5a0be0acfaf2276dd5898b177daeb030.jpeg?fit=bounds&quality=85&width=1280",
+      "hashtags": []
+    },
+    {
+      "title": "FEIEを選ぶとChild Tax Creditの還付が消えます〜Form 2555で失う控除まとめ〜",
+      "url": "https://note.com/wtcajptc/n/ne43ebaead564",
+      "publishAt": "2026-10-27T00:57:34+09:00",
+      "eyecatch": "https://assets.st-note.com/production/uploads/images/325671840/rectangle_large_type_2_e00abafa5011f729339e2a9e9e9df33c.jpeg?fit=bounds&quality=85&width=1280",
+      "hashtags": []
+    },
     {
       "title": "【2026年分Tax Return】去年と同じやり方だと損をする6つの変更点",
       "url": "https://note.com/wtcajptc/n/n4ccb44e0333c",
@@ -2480,8 +2494,8 @@
       "eyecatch": null,
       "hashtags": [
         "#アメリカ",
-        "#米国",
         "#確定申告",
+        "#米国",
         "#居住者"
       ]
     },
@@ -2602,31 +2616,6 @@
         "#税金",
         "#確定申告",
         "#ビザ"
-      ]
-    },
-    {
-      "title": "人と違うことの心地よさ",
-      "url": "https://note.com/wtcajptc/n/n551e54d2968f",
-      "publishAt": "2024-11-23T01:20:53+09:00",
-      "eyecatch": "https://assets.st-note.com/production/uploads/images/162632356/rectangle_large_type_2_31c0c6ccd3233cb9d32eeee3c0a24366.png?fit=bounds&quality=85&width=1280",
-      "hashtags": [
-        "#仕事",
-        "#アメリカ",
-        "#留学",
-        "#ビザ"
-      ]
-    },
-    {
-      "title": "#9【Tax Return】HSAを最大限に活用する方法：税制上のメリットと基本要件",
-      "url": "https://note.com/wtcajptc/n/nd2d2979fc4d6",
-      "publishAt": "2024-11-22T00:24:36+09:00",
-      "eyecatch": "https://assets.st-note.com/production/uploads/images/162633981/rectangle_large_type_2_f7d72fd3fb8d1b2d7a62381e84fe35f6.png?fit=bounds&quality=85&width=1280",
-      "hashtags": [
-        "#アメリカ",
-        "#税金",
-        "#ビザ",
-        "#非課税",
-        "#グリーンカード"
       ]
     }
   ]
