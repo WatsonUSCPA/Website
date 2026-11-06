@@ -381,3 +381,31 @@ p a:not(.btn):not(.contact-cta), li a:not(.btn):not(.contact-cta), dd a, .privac
   .br-wide { display: none; }
   .note-links a { flex-direction: column; gap: 0.2rem; }
 }
+
+/* ---------- Simple home: entry doors (home JP/EN, consult/, request/) ---------- */
+.ws-actions { margin-left: auto; }
+.hero-simple { padding: 4rem 0 3.5rem; }
+.doors-title { font-size: 0.95rem; font-weight: 600; margin: 2.25rem 0 0.9rem; color: var(--text); }
+.doors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.doors-2 { grid-template-columns: repeat(2, 1fr); max-width: 44rem; }
+.door {
+  display: flex; flex-direction: column; gap: 0.35rem; padding: 1.4rem 1.3rem;
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg);
+  color: var(--text); text-decoration: none; transition: border-color 0.15s, background 0.15s;
+}
+.door:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.door-primary { border: 2px solid var(--accent); }
+.door-num { font-size: 0.78rem; font-weight: 600; color: var(--accent); }
+.door strong { font-size: 1.1rem; }
+.door-desc { font-size: 0.85rem; color: var(--muted); flex: 1; line-height: 1.7; }
+.door-cta { margin-top: 0.6rem; font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+.doors-also { margin: 1.25rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.notes-topics-fold { margin-top: 2rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); padding: 0.9rem 1.1rem; }
+.notes-topics-fold summary { cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+.notes-topics-fold[open] summary { margin-bottom: 1rem; }
+.about-links { font-size: 0.88rem; }
+.back-home { margin: 0 0 1.25rem; font-size: 0.85rem; }
+#learn .tools-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 860px) {
+  .doors, .doors-2, #learn .tools-grid { grid-template-columns: 1fr; }
+}

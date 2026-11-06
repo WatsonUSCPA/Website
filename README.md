@@ -16,10 +16,12 @@
 
 ```
 .
-├── index.html              トップページ（日本語）：ヒーロー（通年の税務顧問が主）/ 資産・事業をお持ちの方へ / 取り扱い業務 /
-│                           ご依頼の形 / 判定ツール（FBAR・8938 簡易チェック＋ツール一覧） / テーマから調べる /
-│                           note記事 / 運営者 / ご依頼の流れ
-├── en/index.html           トップページ（英語）。お問い合わせフォーム（Netlify Forms: contact-en）を含む
+├── index.html              トップページ（日本語）：ヒーロー＋3つの入口（相談したい / 依頼したい / 自分で調べたい）/
+│                           自分で調べる（判定ツール・記事検索・テーマから探す〈折りたたみ〉）/ 運営者
+├── consult/ , request/     入口ページ「相談したい」（顧問 → contact/ ・スポット → intake/?type=consult）
+│                           「依頼したい」（個人 → intake/ ・法人 → intake/corp/）
+├── en/index.html           トップページ（英語）。同じ構成＋お問い合わせフォーム（Netlify Forms: contact-en）
+├── en/consult/ , en/request/  英語の入口ページ
 ├── en/intake/              英語の料金見積り（旧 /en/）。Cal.com 予約導線・ポリシー要約を含む
 ├── en/policies/            英語ポリシー
 ├── intake/ , intake/corp/  料金見積り（個人 / 法人）
